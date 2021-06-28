@@ -1,10 +1,4 @@
----
-description: >-
-  Learn more about Minecraft topics like server administration, plugin
-  development, and much more!
----
+# Community Guides
 
-# Vexelosity Community Guides
-
-Test
+Learn more about Minecraft topics like server administration, plugin development, and much more!
 

@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Vexelosity Community Guides](README.md)
+* [Community Guides](README.md)
 
