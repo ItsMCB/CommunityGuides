@@ -11,5 +11,9 @@ Welcome to our guide wiki! This is meant to be a useful resource for all Minecra
 * Geyser & Floodgate
 * Resource Packs
 
+## Get Involved With The Community
+
+Come join us on [Discord](https://discord.com/invite/QW2m6bYG4S)!
+
 
 
