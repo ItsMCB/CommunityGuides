@@ -6,3 +6,7 @@
 
 * [General Guidance](plugin-development/general-guidance.md)
 
+---
+
+* [Contributing](contributing.md)
+
