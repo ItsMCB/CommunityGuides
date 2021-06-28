@@ -18,5 +18,5 @@ Ok, so you've written some code and need to test it. You \(hopefully\) selected 
 
 
 
-This guide is a work in progress. Feel free to [contribute](https://github.com/Vexelosity/CommunityGuides/blob/master/CONTRIBUTING.md).
+This guide is a work in progress. Feel free to [contribute](../contributing.md).
 

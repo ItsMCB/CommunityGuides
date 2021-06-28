@@ -15,5 +15,7 @@ Welcome to our guide wiki! This is meant to be a useful resource for all Minecra
 
 Come join us on [Discord](https://discord.com/invite/QW2m6bYG4S)!
 
+## Deliberations
 
+We're currently making some big decisions in regards to the information hosted here. We believe in the open source ideology, and want to contribute to it. The big question is deciding which license would best suit everyone's needs. Feel free to create a pull request with a license along with some comments about why you think it'd fit well for this project. Thank you 💖
 
