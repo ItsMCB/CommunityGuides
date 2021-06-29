@@ -60,7 +60,7 @@ Click on "New Project". A window should popup. Select the Minecraft tab. Before 
 
 Next, checkmark "Spigot Plugin" and then "Next".
 
-{% hint style="info" %}
+{% hint style="warning" %}
 "Oracle has licensed their own builds of the JDK under a license that requires you to pay for its use in a commercial setting. Instead, we recommend you download the JDK from [https://adoptopenjdk.net/](https://adoptopenjdk.net/). The builds provided there are roughly identical to those provided by Oracle, and there is virtually no reason to use Oracle's proprietary builds instead. If you need help installing, you can read more in [Paper's extensive guide](https://paper.readthedocs.io/en/latest/java-update/index.html)." - [Purpur ](https://discord.gg/mtAAnkk)Discord
 {% endhint %}
 
