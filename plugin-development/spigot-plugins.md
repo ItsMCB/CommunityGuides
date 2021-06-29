@@ -10,7 +10,7 @@ The goal of this guide is to teach you the basics of the Spigot API and provide 
 * Knowledge of how to setup a Minecraft Spigot server
 * Basic understanding of a plugin's structure
 * You've read the [general guidance](general-guidance.md) page.
-* [Minecraft Dev](https://minecraftdev.org/) Intellij Plugin.
+* You've installed [Minecraft Dev](https://minecraftdev.org/) Intellij Plugin.
 
 ## Important Resources
 
