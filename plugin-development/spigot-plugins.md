@@ -88,7 +88,7 @@ You should add relevant information in the optional settings panel if possible. 
 
 Choose a memorable name for your project and hit finish. You're now ready to start coding! Phew... that was a lot, right?
 
-#### The Main Class
+#### Explaining The Main Class
 
 ![](https://i.imgur.com/vpv0koF.png)
 
@@ -129,9 +129,33 @@ These methods trigger when the server that the plugin is on starts up and shuts 
 
 #### Using The Logger
 
-While you can use `System.out.println("Example message");` to print messages to the console, it's generally frowned upon. You should be using a logger.
+While you can use `System.out.println("Example message");` to print messages to the console, it's generally frowned upon. You should be using a logger. While there are a handful to choose from, you can keep it simple and use the built-in [Bukkit Logger](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/plugin/PluginLogger.html).
 
-...
+Find the `onEnable()` method and log a message of your choice. For this example, we'll be logging "Hello World" to the console. We used `.info()` because we're logging general information. Try out `.warn()` or `.severe()` and see how the message changes.
+
+```java
+    @Override
+    public void onEnable() {
+        // Plugin startup logic
+        this.getLogger().info("Hello world!");
+    }
+```
+
+#### Building The Project
+
+So far, the only thing this plugin does is log a message to the console. To ensure everything is good to go, lets build the project. If you're using Intellij, you can click the build button. If you see "BUILD SUCCESS", everything worked successfully. Congrats!
+
+![](https://i.imgur.com/K54wou4.gif)
+
+If you're using Maven, the plugin jar will be outputted to the `target` folder.
+
+![](https://i.imgur.com/d7HxLtq.png)
+
+#### Testing The Plugin
+
+After you located the newly built jar, drag and drop it into the `plugins` folder on your Minecraft server.
+
+#### 
 
 #### Registering a Command
 
@@ -148,6 +172,15 @@ While you can use `System.out.println("Example message");` to print messages to 
 #### Adding Dependencies
 
 ...
+
+#### Common Issues
+
+```java
+[15:07:01 ERROR]: Could not load 'plugins\BeginnerProject-1.0-SNAPSHOT.jar' in folder 'plugins'
+org.bukkit.plugin.InvalidPluginException: Unsupported API version 1.17...
+```
+
+You are trying to load the plugin on an unsupported server. If you're making a plugin with the 1.17 API, please make sure the Minecraft server jar is running Minecraft 1.17 and not 1.16 or below.
 
 This guide is a work in progress. Feel free to [contribute](../contributing.md).
 
