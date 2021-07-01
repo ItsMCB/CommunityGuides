@@ -1,5 +1,7 @@
 # Community Guides
 
+[![Discord](https://img.shields.io/discord/693992573294870639.svg)](https://discord.com/invite/QW2m6bYG4S)
+
 ## Project Goal
 
 Welcome to our guide wiki! This is meant to be a useful resource for all Minecrafters who go beyond just playing the game. You can learn more about topics like server administration, plugin development, and much more!
