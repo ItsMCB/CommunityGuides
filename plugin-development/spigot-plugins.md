@@ -78,7 +78,7 @@ The GroupId can be anything you want. However, it's best to keep these naming co
 
 ![](https://i.imgur.com/efjityF.png)
 
-Here are you Spigot settings. Make sure that you select the correct Minecraft version before continuing.
+Here are your Spigot settings. Make sure that you select the correct Minecraft version before continuing.
 
 {% hint style="info" %}
 You should add relevant information in the optional settings panel if possible. It will automatically add it to relevant locations in your project, which could save you time later down the line.
