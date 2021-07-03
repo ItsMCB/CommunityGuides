@@ -1,10 +1,6 @@
 # Community Guides
 
-[![License](https://img.shields.io/github/license/Vexelosity/CommunityGuides)](https://img.shields.io/github/license/Vexelosity/CommunityGuides)
-[![Github Forks](https://img.shields.io/github/forks/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/network/members)
-[![GitHub Stars](https://img.shields.io/github/stars/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/issues)
-[![Discord](https://img.shields.io/discord/693992573294870639.svg)](https://discord.com/invite/QW2m6bYG4S)
+[![License](https://img.shields.io/github/license/Vexelosity/CommunityGuides)](https://img.shields.io/github/license/Vexelosity/CommunityGuides) [![Github Forks](https://img.shields.io/github/forks/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/network/members) [![GitHub Stars](https://img.shields.io/github/stars/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/issues) [![Discord](https://img.shields.io/discord/693992573294870639.svg)](https://discord.com/invite/QW2m6bYG4S)
 
 ## Project Goal
 

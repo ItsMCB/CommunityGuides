@@ -37,6 +37,7 @@ This first project will be a barebones example of a plugin's structure. It will 
 
 * 1 Registered Command
 * 1 Registered Event
+* 1 Runnable \(background task\)
 * Plugin.yml
 * Config.yml
 * 1 dependency
@@ -147,21 +148,61 @@ So far, the only thing this plugin does is log a message to the console. To ensu
 
 ![](https://i.imgur.com/K54wou4.gif)
 
-If you're using Maven, the plugin jar will be outputted to the `target` folder.
+If you're using Maven, the plugin jar will be outputted to the project's `target` folder.
 
 ![](https://i.imgur.com/d7HxLtq.png)
 
 #### Testing The Plugin
 
-After you located the newly built jar, drag and drop it into the `plugins` folder on your Minecraft server.
+After you located the newly built jar, drag and drop it into the `plugins` folder on your Minecraft server. After you restart the server, you should see a message similar to the following with your plugin's name:
 
-#### 
+```java
+[INFO]: [BeginnerProject] Enabling BeginnerProject v1.0-SNAPSHOT
+```
+
+If you're following the tutorial, you should see the message you logged in your code too. If you don't see any errors, then you know it loaded correctly. Congrats on making it this far!
+
+{% hint style="info" %}
+You can execute `/plugins` to view the plugins that the server tried to load last start up. Green indicates it loaded correctly while red indicates that it didn't.
+{% endhint %}
+
+#### Making Your Life Easier
+
+Building a project, waiting for it to finish, shutting down the server, opening the directory that has the newly built plugin, dragging and dropping it into the plugins folder, and then finally restarting the server wastes so much time. Wouldn't it be great if there was a way to automatically copy the new jar? Well, there is. All you need to do is add a command that copies the file into your server start script.
+
+Most operating systems can open Bash files. If you're on MacOS or Linux \(Windows too if you have a program that supports it like Git Bash\), you can use the following script **template** to do so. Please make sure to **edit the values before using the script**.
+
+```bash
+#!/bin/bash
+while true; do
+    rm "C:\Users\ItsMC\Desktop\Local Velocity Network\Server2\plugins\BeginnerProject-1.0-SNAPSHOT.jar" # Delete old plugin jar
+    echo "[i] Copying the plugin..."
+    cp -a "C:\Users\ItsMC\Desktop\Github\BeginnerProject\target\BeginnerProject-1.0-SNAPSHOT.jar" "C:\Users\ItsMC\Desktop\Local Velocity Network\Server2\plugins\\" # Copy jar from output folder to server's plugins folder
+    java -Xms3G -Xmx3G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar *.jar nogui #Launch the jar file in the directory w/3 gigs of RAM and implementing Aikar's Flags
+    echo "[i] Restarting..." # Line ran after Java process has been stopped
+    sleep 3 # Waits 3 seconds before restarting the server
+done;
+```
+
+All you need to do is build the project, wait for it to finish, and then restart your server. So much easier than before, right?
+
+#### Creating Commands
+
+...
 
 #### Registering a Command
 
 ...
 
+#### Creating Events
+
+...
+
 #### Registering an Event
+
+...
+
+#### Bukkit Runnables
 
 ...
 
