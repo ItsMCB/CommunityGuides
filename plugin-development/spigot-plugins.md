@@ -17,8 +17,10 @@ The goal of this guide is to teach you the basics of the Spigot API and provide 
 Check out these resources to aid you in your development process.
 
 * [Vexelosity Discord](https://discord.com/invite/QW2m6bYG4S)
+* [Bukkit Javadocs](https://hub.spigotmc.org/javadocs/bukkit/)
 * [SpigotMC Official Website](https://www.spigotmc.org/)
 * [SpigotMC - "Tips on creating your very first plugin!"](https://www.spigotmc.org/wiki/tips-on-creating-your-very-first-plugin/)
+* [SpigotMC's Plugin.yml Guide](https://www.spigotmc.org/wiki/plugin-yml/)
 
 ## Projects
 
@@ -35,7 +37,7 @@ Start here if you're just beginning your Minecraft plugin development journey.
 
 This first project will be a barebones example of a plugin's structure. It will contain:
 
-* 1 Registered Command
+* 1 Registered Command with tab completion
 * 1 Registered Event
 * 1 Runnable \(background task\)
 * Plugin.yml
@@ -188,9 +190,53 @@ All you need to do is build the project, wait for it to finish, and then restart
 
 #### Creating Commands
 
+To ensure our project doesn't get messy, we'll be putting all our commands in a commands package \(folder\).
+
+![](https://i.imgur.com/9pwAyqY.gif)
+
+
+
+Commands can be executed from the player or the console.
+
 ...
 
 #### Registering a Command
+
+You will need to register a command executor in the main class and add the command to your plugin's `plugin.yml` file.
+
+First, navigate to your main class. Under the `onEnable()` method, set a command executor.
+
+```java
+getCommand("spawnrandom").setExecutor(new SpawnRandom(this));
+```
+
+We getting the `spawnrandom` command and setting it's execution \(triggers when command is submitted\) to the class which handles it. We're passing the `this` Plugin instance so it can be accessed non-statically.
+
+Lastly, navigate over to the `plugin.yml` file under the `resources` folder. You'll need to add your command in for it to register correctly. I suggest you include the following information:
+
+```yaml
+permissions:
+  beginnerproject.spawnrandom:
+    description: Allows you to spawn random mobs!
+    default: op
+commands:
+  spawnrandom:
+    description: Spawns a random mob!
+    aliases: sr
+    usage: /spawnrandom <amount>
+    permission: beginnerproject.spawnrandom
+    permission-message: Oops, you don't have permission to execute that command!
+```
+
+To get a better understanding of what these values mean, and to see even more of them, please visit [SpigotMC's Plugin.yml Guide](https://www.spigotmc.org/wiki/plugin-yml/).
+
+#### Tab Completion
+
+...
+
+#### 
+
+#### Registering Tab Completion
 
 ...
 
