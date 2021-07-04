@@ -8,9 +8,15 @@ Welcome to our guide wiki! This is meant to be a useful resource for all Minecra
 
 ### Topics \(Coming Soon\)
 
+Topics with hyperlinks are at least somewhat complete.
+
 * Server Administration
+  * General Guidance
+  * Setting up a server
+  * Geyser & Floodgate
 * [Plugin Development](plugin-development/general-guidance.md)
-* Geyser & Floodgate
+  * [General Guidance](plugin-development/general-guidance.md)
+  * [Spigot Plugins](plugin-development/spigot-plugins.md)
 * Resource Packs
 
 This project is best viewed on our [Gitbook](https://vexelosity.gitbook.io/community-guides/).
