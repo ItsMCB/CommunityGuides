@@ -19,7 +19,7 @@ Topics with hyperlinks are at least somewhat complete.
   * [Spigot Plugins](plugin-development/spigot-plugins.md)
 * Resource Packs
 
-This project is best viewed on our [Gitbook](https://vexelosity.gitbook.io/community-guides/).
+This project is best viewed on our [Website](https://guides.vexelosity.com/).
 
 ## Get Involved With The Community
 
