@@ -1,6 +1,6 @@
 # Creating a Java Server
 
-About
+### About
 
 Minecraft is a great game! However, it wouldn't be what it is today without it's [multiplayer features](https://help.minecraft.net/hc/en-us/articles/360035131391-How-to-Play-Minecraft-Multiplayer). Playing on servers with friends is a lot of fun, but what if you want to make your own server? From choosing your server software to setting up plugins \(or mods\), this guide will extensively cover how to create different types of Minecraft: Java Edition servers.
 
@@ -410,7 +410,7 @@ N/A - Glowstone's code is completely original.
 
 ...
 
-### Grabbing The Jar
+### Downloading The Jar
 
 ...
 
