@@ -10,6 +10,11 @@
 ## Server Administration
 
 * [General Guidance](server-administration/general-guidance.md)
+* [Creating a Java Server](server-administration/creating-a-java-server.md)
+
+## Communities
+
+* [About](communities/about.md)
 
 ---
 

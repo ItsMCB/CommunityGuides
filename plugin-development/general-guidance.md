@@ -20,7 +20,7 @@ You should get to know your IDE before trying to seriously code anything. I sugg
 
 ## Building Your Code
 
-Ok, so you've written some code and need to test it. You \(hopefully\) selected a build tool like Maven or Gradle. There should be a build button somewhere in your IDE. When you click it, the code will compile. Check the build output for an errors and correct your code if needed. However, your IDE should warn you if there is a problem before you start to build your project.
+So you've written some code and need to test it. You \(hopefully\) selected a build tool like Maven or Gradle. There should be a build button somewhere in your IDE. When you click it, the code will compile. Check the build output for an errors and correct your code if needed. However, your IDE should warn you if there is a problem before you start to build your project.
 
 ### Quick Links
 

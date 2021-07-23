@@ -4,22 +4,13 @@
 
 ## Project Goal
 
-Welcome to our guide wiki! This is meant to be a useful resource for all Minecrafters who go beyond just playing the game. You can learn more about topics like server administration, plugin development, and much more!
+Welcome to our guide wiki! This is meant to be a useful resource for all Minecraft players who go beyond just playing the game. You can learn more about topics like server administration, plugin development, and much more!
 
-### Topics \(Coming Soon\)
+### Note
 
-Topics with hyperlinks are at least somewhat complete.
+The "..." indicates that a section will be finished another time. Please be patient while the guides are being worked on 💖
 
-* Server Administration
-  * General Guidance
-  * Setting up a server
-  * Geyser & Floodgate
-* [Plugin Development](plugin-development/general-guidance.md)
-  * [General Guidance](plugin-development/general-guidance.md)
-  * [Spigot Plugins](plugin-development/spigot-plugins.md)
-* Resource Packs
-
-This project is best viewed on our [Website](https://guides.vexelosity.com/).
+This project is best viewed on our [website](https://guides.vexelosity.com/).
 
 ## Get Involved With The Community
 

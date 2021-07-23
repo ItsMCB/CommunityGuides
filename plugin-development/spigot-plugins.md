@@ -12,7 +12,7 @@ The goal of this guide is to teach you the basics of the Spigot API and provide 
 * You've read the [general guidance](general-guidance.md) page.
 * You've installed [Minecraft Dev](https://minecraftdev.org/) Intellij Plugin.
 
-## Important Resources
+## Useful Resources
 
 Check out these resources to aid you in your development process.
 
