@@ -6,7 +6,8 @@ Minecraft is a great game! However, it wouldn't be what it is today without it's
 
 ### Prerequisites
 
-...
+* A beginner to advanced understanding of Minecraft.
+* Experience playing on a Minecraft server.
 
 ### Useful Resources
 
@@ -24,7 +25,7 @@ Choosing the right software is very important as it will define your limitations
 
 ### What are "forks"?
 
-This is a [Git ](https://en.wikipedia.org/wiki/Git)\(a [version control](https://en.wikipedia.org/wiki/Version_control) technology which is very popular in the development space\) term that refers to taking code and making a variant of it. An example of this is how the Minecraft modding platform called Forge uses code from the official Minecraft server software, but then adds their own code into the project to allow for mods to work. This means that the difference between the fork \(Forge\) and the original is the code they created. However, without the original code, Forge wouldn't run because it's built on top of the original.
+This is a [Git ](https://en.wikipedia.org/wiki/Git)\(a [version control](https://en.wikipedia.org/wiki/Version_control) technology which is very popular in the development space\) term that refers to taking code and making a variant of it. An example of this is how Spigot uses code from Bukkit, but then adds their own code into the project. This means that the difference between the fork \(Spigot\) and the original is the code they created. However, without the original code \(The Bukkit plugin API\), Spigot wouldn't work properly because it's built on top of the original.
 
 ### What is "vanilla" Minecraft?
 
@@ -51,6 +52,28 @@ Plugins are pieces of software that are added onto the server only. Plugins do n
 {% hint style="info" %}
 A popular example of a plugin is [Essentials X](https://essentialsx.net/), a suite of useful server commands for players and server staff.
 {% endhint %}
+
+### What are "patches"?
+
+Patches are code changes that optimize, fix things, or add new features.
+
+#### Why Use Patches?
+
+Patches are used as a work-around to avoid DMCA takedowns. For example, when you first run a Spigot server, it will download the Minecraft Jar and Bukkit code, then it'll inject the Spigot patches into them and then start the server. This is legal because they're not actually distributing the protected code, but rather just downloading the needed files and then injecting their changes into it.
+
+#### When Did Projects Start Using Patches?
+
+Projects like Spigot started using patches after the Bukkit DMCA takedown fiasco.
+
+### What is "upstream" and "downstream"?
+
+This is a Git term that refers to where a fork relative to the project or another fork. Lets use CraftBukkit and Paper as an example.
+
+CraftBukkit -&gt; Spigot -&gt; Paper
+
+CraftBukkit is upstream relative to Spigot and Paper. Paper and Spigot are downstream relative to CraftBukkit.
+
+This becomes important when you start using forked versions of server software. For example, when Minecraft 1.17 came out, Paper couldn't begin work on migrating their patches. This is because they had to wait for Spigot to finish their updating first because Paper's patches are built on top of Spigot's.
 
 ## Software Options
 
@@ -89,7 +112,7 @@ A forked version of vanilla Minecraft that includes support for Bukkit plugins.
 
 | Owner | Source Status | Project Status | Implements |
 | :--- | :--- | :--- | :--- |
-| Mojang | "It's complicated" | Dead | Bukkit API |
+| Mojang | It's complicated | Dead | Bukkit API |
 
 {% hint style="warning" %}
 Bukkit was acquired by Mojang on February 28, 2012. However, this project has been ceased since Q3 2014 because of a DMCA takedown dispute. The project is dead, so use a continued forked version instead.
@@ -107,11 +130,11 @@ Bukkit was acquired by Mojang on February 28, 2012. However, this project has be
 {% tab title="Information" %}
 ![](https://static.spigotmc.org/img/spigot.png)
 
-The continuation of the CraftBukkit project that supports Spigot plugins.
+A popular fork of the CraftBukkit project that supports the Bukkit plugin API.
 
 | Owner | Source Status | Project Status | Implements |
 | :--- | :--- | :--- | :--- |
-| SpigotMC Pty. Ltd. | [Open](https://hub.spigotmc.org/stash/projects/SPIGOT) | Alive | Bukkit & Spigot API |
+| [SpigotMC Pty. Ltd.](https://github.com/SpigotMC) | [Open](https://hub.spigotmc.org/stash/projects/SPIGOT) | Alive | Bukkit & Spigot API |
 
 | [bStats](https://bstats.org/global/bukkit) |
 | :---: |
@@ -404,9 +427,59 @@ N/A - Glowstone's code is completely original.
 
 ## Hosting Options
 
+Explain the difference between shared hosting, dedicated racks, the issue of home hosting, etc.
+
 ...
 
-## Creating a Purpur Server
+## Important Information About JDKs
+
+Java is unsurprisingly the platform typically used to run Minecraft: Java Edition servers. Java is an evolving language, and that means new versions come out as time goes on. Stuff written for a specific version may not be compatible with an older or newer version. Your JDK, or Java Development Kit, includes a JVM, or Java Virtual Machine, that executes the Java Byte code. When you play Minecraft \(using the new launcher\), it loads up the correct JDK automatically. Server software doesn't come with a JDK, meaning you may need to set a compatible one up manually.
+
+### Where Should I Get My JDK?
+
+Java is primarily developed by [Oracle](https://www.oracle.com/) — you're able to download the copy you need from their website. However, it includes a license that states you must **pay** in order to use it in a commercial setting \(which you will be\). Luckily, you can instead download the JDK from [https://adoptopenjdk.net/](https://adoptopenjdk.net/). The builds provided are closely identical to those provided by Oracle. Best of all, there's no egregious license you must agree to. There's virtually no reason to use Oracle's proprietary builds instead.
+
+### Which JDK Do I Need?
+
+Minecraft 1.12-1.16.5 requires Java 8 or "newer". Minecraft 1.17+ requires Java 16. However, there is nuance to this. For example, Forge for 1.12 doesn't work with Java 11. Unless you'll be running a 1.17+ server, you may want to install Java 8, Java 11, and Java 16 for when you need them. The most basic way of managing multiple Java versions is by finding the directory of the installed JDK version needed and then passing your Java command.
+
+#### Linux Bash Example
+
+```bash
+# Target the directory where the binary is so the Java command is executed there instead of the system default.
+
+# Execute the "version" Java command with the Java 8 binary
+/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -version
+
+# Execute the "version" Java command with the Java 11 binary
+/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -version
+```
+
+#### Example Output
+
+```bash
+openjdk version "1.8.0_292"
+OpenJDK Runtime Environment (build 1.8.0_292-8u292-b10-0ubuntu1~20.10-b10)
+OpenJDK 64-Bit Server VM (build 25.292-b10, mixed mode)
+
+openjdk version "11.0.11" 2021-04-20
+OpenJDK Runtime Environment (build 11.0.11+9-Ubuntu-0ubuntu2.20.10)
+OpenJDK 64-Bit Server VM (build 11.0.11+9-Ubuntu-0ubuntu2.20.10, mixed mode, sharing)
+```
+
+### What Happens If I Use The Wrong JDK?
+
+If you see an error in the console upon startup, it may be because the JDK isn't compatible. Using the wrong JDK \(typically\) won't break anything, so don't worry if you do.
+
+### Why Use a Newer JDK?
+
+Each new release of Java includes important performance and security improvements. To get the most out of your server, you'll want to use the greatest compatible version. Ex. using Java 11 for a 1.14 server even though it could work with Java 8.
+
+### How Do I Get a JDK for Java 16?
+
+Paper has an extensive guide on it that you can view [here](https://paper.readthedocs.io/en/latest/java-update/index.html).
+
+## Creating The Server
 
 ...
 
@@ -446,5 +519,15 @@ A: Find the `port` value in `server.properties` and set it to the desired port n
 
 Projects are step-by-step text and video tutorials that are used to better understand a topic.
 
+### Creating a 1.17 Survival Server
+
 ...
+
+### Creating a 1.12 Pixelmon Server
+
+...
+
+## Document Contributor\(s\):
+
+* [ItsMCB](https://github.com/ItsMCB)
 

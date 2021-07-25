@@ -4,17 +4,19 @@
 
 ## Project Goal
 
-Welcome to our guide wiki! This is meant to be a useful resource for all Minecraft players who go beyond just playing the game. You can learn more about topics like server administration, plugin development, and much more!
+Welcome to Vexelosity's Community Guides! This is meant to be a useful resource for all Minecraft players who go beyond just playing the game. You can learn about topics such as server administration, plugin development, and much more!
 
-### Note
-
-The "..." indicates that a section will be finished another time. Please be patient while the guides are being worked on 💖
-
-This project is best viewed on our [website](https://guides.vexelosity.com/).
+#### This project is best viewed on our [website](https://guides.vexelosity.com/).
 
 ## Get Involved With The Community
 
 Come join us on [Discord](https://discord.com/invite/QW2m6bYG4S)!
+
+Know a thing or two about Minecraft? [Contribute](contributing.md)!
+
+## Note
+
+The "..." indicates that a section will be finished another time. Please be patient while the guides are being worked on 💖
 
 ## Deliberations
 
