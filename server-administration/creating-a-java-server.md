@@ -549,6 +549,42 @@ Upon running the server, configuration files and folders will generate. The foll
 * [purpur.yml](https://purpur.pl3x.net/docs/Configuration/)
 * [glowstone.yml](https://docs.glowstone.net/en/latest/Configuration_Guide/glowstone_yml.html)
 
+## Setting Up Plugins
+
+### Finding Plugins
+
+Bukkit plugin API based forks \(Spigot, Paper, etc.\) marketplaces:
+
+* [SpigotMC Resources](https://www.spigotmc.org/resources/)
+* [MC-Market](https://www.mc-market.org/)
+
+If you're using Sponge Vanilla or Sponge Forge, check out the following marketplaces:
+
+* [Ore platform](https://ore.spongepowered.org/)
+* [SpongePowered Forums](https://forums.spongepowered.org/c/plugins/6)
+
+{% hint style="info" %}
+We do not endorse any of the platforms mentioned. They are simply listed for your convenience.
+{% endhint %}
+
+### Installing Plugins
+
+Once you find a resource you want, download it, then move that file into the `plugins` directory of your server. If your server uses the Sponge API, put that plugin into the `mods` folder instead. To load the plugin, you'll need to shut down and then reboot your server.
+
+### Editing Configs
+
+Most plugins will have configuration files. Under the `plugins` directory, look for a newly generated folder. It will typically be called the name of the plugin. All the relevant configuration files for that plugin will be in that folder. You can open those files and edit the values to your liking. If you are unsure about a value, look for a configuration explanation on the plugin page. Some plugins will let you reload the config through a command, ex. `/coolplugin reload`. If not, reboot your server.
+
+## Setting Up Mods
+
+### Finding Mods
+
+The two safest ways to get mods are to use [CurseForge ](https://www.curseforge.com/minecraft/mc-mods)or the mod author's official website.
+
+### Editing Configs
+
+Interestingly, most mods will generate folders that hold configurations outside of the mods folder. If you're looking to edit a config of a mod, look in the root of the server's folder.
+
 ## Server Security - Single Servers
 
 ### Online Mode
@@ -565,7 +601,7 @@ While many plugin marketplaces such as SpigotMC's resources section contains fre
 
 * It is unethical and ILLEGAL.
 * If you're paying money, it goes to the person stealing the code instead of the actual developer.
-* Most of those distributed jars contain malicious code. Ex. straight up malware, CPU miners, self-destruct scripts \(deletes all your server files\), etc.
+* Those distributed jars contain malicious code; straight up malware, CPU miners, self-destruct scripts \(deletes all your server files\), etc.
 
 There are additionally security concerns that will be covered in "Server Security - Proxy".
 
@@ -584,6 +620,8 @@ A: [https://sqlitebrowser.org/](https://sqlitebrowser.org/)
 Projects are step-by-step text and video tutorials that are used to better understand a topic.
 
 ### Creating a 1.17 Survival Server
+
+One of the most common types of Minecraft server is a survival server. This project will lead you through which software you'll want to use and how to configure them.
 
 ...
 
