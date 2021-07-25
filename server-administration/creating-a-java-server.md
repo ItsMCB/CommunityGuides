@@ -130,7 +130,7 @@ Bukkit was acquired by Mojang on February 28, 2012. However, this project has be
 {% tab title="Information" %}
 ![](https://static.spigotmc.org/img/spigot.png)
 
-A popular fork of the CraftBukkit project that supports the Bukkit plugin API.
+The widely accepted continuation of the CraftBukkit project.
 
 | Owner | Source Status | Project Status | Implements |
 | :--- | :--- | :--- | :--- |
@@ -427,9 +427,23 @@ N/A - Glowstone's code is completely original.
 
 ## Hosting Options
 
-Explain the difference between shared hosting, dedicated racks, the issue of home hosting, etc.
+All you need to run a Minecraft server is a running computer with an operating system. While this gives you many options, but not all will be satisfactory to your needs.
 
-...
+#### Home Hosting
+
+The term "home hosting" refers to running or "hosting" your Minecraft server off a personal computer. A potential issue is that you'll need to share your computer's IP address \(reveals your approximate physical location\) so others can connect. While you could use something to mask it, such as TCP Shield \(which costs money\), there are other issues, such as your computer needing to be powered on 24/7 \(if you want the server to stay online\) and having to setup port forwarding. Home hosting is a popular option for those looking to experiment with setting up servers, are coding plugins, or only has a few trusted friends joining.
+
+#### Shared Hosting
+
+Shared hosting typically means you'll be renting cloud computing hardware to run your server. However, other servers will be running off the same computer. Performance may be degraded as the other servers could be hogging processing resources. However, sharing your hardware often means sharing the cost. You'll typically find it to be much cheaper than other options. Keep in mind that these services don't give you full system control, and you typically can run one server per plan. Shared hosting is a popular option for those looking for a cheaper server hosting solution for a single server.
+
+#### Dedicated Hardware
+
+Dedicated hardware typically means renting cloud computing hardware. However, you have full control \(root access\) over the system and aren't sharing it's resources with anyone. This is great as you can run as many things as the hardware can handle. It's worth noting that while one may be enough for smaller server networks, bigger ones, such as Hypixel, have a fleet of connected dedicated computers. This is a popular option for serious Minecraft server networks who are hosting more than one server at once with high player counts.
+
+#### Other Options And Considerations
+
+While those are the most widely used options, there are other ways to host a server that can be found online. The important thing to remember is that your server can scale, meaning that you can start off home hosting or shared hosting, and then move up to dedicated, or vice versa.
 
 ## Important Information About JDKs
 
@@ -443,7 +457,7 @@ Java is primarily developed by [Oracle](https://www.oracle.com/) — you're able
 
 Minecraft 1.12-1.16.5 requires Java 8 or "newer". Minecraft 1.17+ requires Java 16. However, there is nuance to this. For example, Forge for 1.12 doesn't work with Java 11. Unless you'll be running a 1.17+ server, you may want to install Java 8, Java 11, and Java 16 for when you need them. The most basic way of managing multiple Java versions is by finding the directory of the installed JDK version needed and then passing your Java command.
 
-#### Linux Bash Example
+### Linux Bash Example
 
 ```bash
 # Target the directory where the binary is so the Java command is executed there instead of the system default.
@@ -479,39 +493,89 @@ Each new release of Java includes important performance and security improvement
 
 Paper has an extensive guide on it that you can view [here](https://paper.readthedocs.io/en/latest/java-update/index.html).
 
-## Creating The Server
-
-...
+## Running The Server Software
 
 ### Downloading The Jar
 
-...
+Each project hosts their server jars differently, which can make finding them a tad complicated. It's often recommended to go to the projects website and look for a "download" button and or read the `README.MD` of their GitHub repository and download the latest release version.
+
+![](https://i.imgur.com/HClBh6d.gif)
+
+
+
+Move the jar into a folder. The folder name could be anything, but typically people make it "Minecraft Server" or the name of their server.
 
 ### Creating a Start File
 
-...
+To actually run the jar, you'll need to use a command. However, typing that command every time is inefficient. Luckily, you can create a script that will do it for you. Check out [SpigotMC's Installation Guide](https://www.spigotmc.org/wiki/spigot-installation/) for information about how to create a start script. If you're using multiple JDKs, refer to this [example](creating-a-java-server.md#linux-bash-example).
+
+If you're able to use Bash, here is a basic start script that automatically restarts the server when it has stopped. Make sure to edit the RAM values \(`-Xms3G -Xmx3G` —allows the JVM to use 3 gigabytes of RAM\).
+
+```bash
+#!/bin/bash
+while true; do
+    java -Xms3G -Xmx3G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar *.jar nogui #Launch the jar file in the directory w/3 gigs of RAM and implementing Aikar's Flags without a GUI
+    echo "[i] Restarting in 3 seconds..." # Print msg to console
+    sleep 3 # Wait 3 seconds before restarting the server
+done;
+```
 
 ### Accepting The EULA
 
-...
+Your server will not launch if you have not accepted the EULA. Here is how you can accept it:
+
+1. Launch the server once, and when it fails, shut it down.
+2. Locate the newly generated `eula.txt` file in the directory of the launched server.
+3. Open it, and change "false" to "true", and save the file.
+4. Restart your server.
+
+### Editing The Port
+
+By default, Minecraft servers will try to bind to port `25565`. This should be changed if someone is already using that port, such as another Minecraft server. You can do so by finding the `server.properties` file and then changing the `port` to the desired value.
+
+#### Note About Ports
+
+The maximum value for a [port ](https://en.wikipedia.org/wiki/Port_%28computer_networking%29)is `65535`. It's good practice to use a port number somewhere between 25565 and that maximum value, such as or `25570`.
 
 ### Exploring The Configs
 
-Add links to info about server.properties, bukkit.yml, spigot.yml, paper.yml, purpur.yml, etc.
+Upon running the server, configuration files and folders will generate. The following are links to documentation about those files that may generate depending on the server software you're using.
 
-...
+* [server.properties](https://minecraft.fandom.com/wiki/Server.properties)
+* [bukkit.yml](https://bukkit.fandom.com/wiki/Bukkit.yml)
+* [spigot.yml](https://www.spigotmc.org/wiki/spigot-configuration/)
+* [paper.yml](https://paper.readthedocs.io/en/latest/server/configuration.html)
+* [tuinity.yml](https://github.com/Tuinity/Tuinity/wiki/Config)
+* [purpur.yml](https://purpur.pl3x.net/docs/Configuration/)
+* [glowstone.yml](https://docs.glowstone.net/en/latest/Configuration_Guide/glowstone_yml.html)
 
-## Server Security
+## Server Security - Single Servers
 
-Explain how one shouldn't use illegitimate mods, plugins, server software, or clients, explain online mode, etc.
+### Online Mode
 
-...
+In the `server.properties` file, there is an option called `online-mode`. If enabled \(true\), then players will be authenticated through Mojang when they join. This ensures the player connecting has a legitimately purchased account. However, if it is disabled \(false\), the authentication doesn't happen. This means "cracked" or illegal/illegitimate accounts can join your server. For single server setups, it should always be true \(unless you want cracked accounts - which support piracy, and piracy is illegal\).
+
+#### Why Disable Online-Mode?
+
+Online-mode must be disabled for servers that are connected through a proxy such as Bungeecord or Velocity.
+
+### "Cracked" Plugins
+
+While many plugin marketplaces such as SpigotMC's resources section contains free plugins, some developers choose to make people pay for their resource. Certain websites offer "cracked" versions of premium plugins. This means you can download the plugin at a reduced price, or for free. **DO NOT EVEN THINK ABOUT DOING THIS.**
+
+* It is unethical and ILLEGAL.
+* If you're paying money, it goes to the person stealing the code instead of the actual developer.
+* Most of those distributed jars contain malicious code. Ex. straight up malware, CPU miners, self-destruct scripts \(deletes all your server files\), etc.
+
+There are additionally security concerns that will be covered in "Server Security - Proxy".
 
 ## FAQ \(Frequently Asked Questions\)
 
-### Q: "How can I change the server port?"
+Based on actual questions I've been asked multiple times.
 
-A: Find the `port` value in `server.properties` and set it to the desired port number.
+### Q: "How do I open an SQLite file?"
+
+A: [https://sqlitebrowser.org/](https://sqlitebrowser.org/)
 
 ...
 
