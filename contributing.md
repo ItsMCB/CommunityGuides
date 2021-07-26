@@ -13,11 +13,13 @@ We're still deciding which license we should use for this project. See the [main
 
 ## Becoming A Writer
 
-If you have a topic you'd like to write about, please first discuss it via an issue with the " I want to write about a topic" template. Expect to get a reply about your topic. This could be either be asking for more information, denial, or \(most likely\) approval.
+If you have a topic you'd like to write about, please first discuss it via an issue with the " I want to write about a topic" template. Expect to get a reply about your topic. This could be either be asking for more information, denial, or \(most likely\) approval. 
+
+You'll then be asked to create a fork of the repository. The fork is where you'll be comitting your changes to. Once you feel like you've completed the topic, create a pull request. If all goes well, your PR will be merged, resulting it in instantly going live on this repo and Vexelosity website.
 
 ## Proposing Changes
 
-If you think something is wrong with preexisting writing, such as information not being clear or needing to be updated, create a PR.
+If you think something is wrong with preexisting writing, such as missing information or something needing to be updated, please create a PR.
 
 ## Requesting Topics
 
