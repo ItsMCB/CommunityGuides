@@ -17,7 +17,7 @@ If you have a topic you'd like to write about, please first discuss it via an is
 
 ## Proposing Changes
 
-If you think something is wrong with preexisting writing, such as information not being clear or needed to be updated, create a PR.
+If you think something is wrong with preexisting writing, such as information not being clear or needing to be updated, create a PR.
 
 ## Requesting Topics
 
