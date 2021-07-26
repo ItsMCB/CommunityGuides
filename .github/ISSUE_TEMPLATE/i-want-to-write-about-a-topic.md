@@ -7,21 +7,23 @@ assignees: ItsMCB
 
 ---
 
-**What topic will you be writing about?**
-
-**Why do you think this is an important topic to cover?**
+## What topic will you be writing about?
 
 
-**Who is the intended audience for this topic?**
+## Why do you think this is an important topic to cover?
 
 
-**How in-depth will you go?**
+## Who is the intended audience for this topic?
 
 
-**What sub-categories will be covered in your writing?**
+## How in-depth will you go?
 
 
-**What makes you an expert about this topic?**
+## What sub-categories will be covered in your writing?
 
 
-**Will you maintain your submission? (Meaning you'll update it when necessary)**
+## What makes you an expert about this topic?
+
+
+## Will you maintain your submission? (Meaning you'll update it when necessary)
+
