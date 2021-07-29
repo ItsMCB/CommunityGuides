@@ -2,7 +2,7 @@
 
 ### About
 
-Minecraft is a great game! However, it wouldn't be what it is today without it's [multiplayer features](https://help.minecraft.net/hc/en-us/articles/360035131391-How-to-Play-Minecraft-Multiplayer). Playing on servers with friends is a lot of fun, but what if you want to make your own server? From choosing your server software to setting up plugins \(or mods\), this guide will extensively cover how to create different types of Minecraft: Java Edition servers.
+Minecraft wouldn't be what it is today without it's [multiplayer features](https://help.minecraft.net/hc/en-us/articles/360035131391-How-to-Play-Minecraft-Multiplayer). Playing on servers with friends is a lot of fun, but what if you want to make your own server? From choosing your server software to setting up plugins \(or mods\), this guide will extensively cover how to create different types of Minecraft: Java Edition servers.
 
 ### Prerequisites
 
@@ -427,11 +427,11 @@ N/A - Glowstone's code is completely original.
 
 ## Hosting Options
 
-All you need to run a Minecraft server is a running computer with an operating system. While this gives you many options, but not all will be satisfactory to your needs.
+All you need to run a Minecraft server is a running computer with an operating system. While this gives you many options, not all will be satisfactory to your needs.
 
 #### Home Hosting
 
-The term "home hosting" refers to running or "hosting" your Minecraft server off a personal computer. A potential issue is that you'll need to share your computer's IP address \(reveals your approximate physical location\) so others can connect. While you could use something to mask it, such as TCP Shield \(which costs money\), there are other issues, such as your computer needing to be powered on 24/7 \(if you want the server to stay online\) and having to setup port forwarding. Home hosting is a popular option for those looking to experiment with setting up servers, are coding plugins, or only has a few trusted friends joining.
+The term "home hosting" refers to running or "hosting" your Minecraft server off a personal computer. A potential issue is that you'll need to share your computer's IP address \(reveals your approximate physical location\) so others can connect. While you could use something to mask it, such as TCP Shield \(which costs money\), there are other issues, such as your computer needing to be running 24/7 \(if you want the server to stay online\) and having to setup port forwarding. Home hosting is a popular option for those looking to experiment with setting up servers, are coding plugins, or only have a few trusted friends joining.
 
 #### Shared Hosting
 
@@ -447,17 +447,17 @@ While those are the most widely used options, there are other ways to host a ser
 
 ## Important Information About JDKs
 
-Java is unsurprisingly the platform typically used to run Minecraft: Java Edition servers. Java is an evolving language, and that means new versions come out as time goes on. Stuff written for a specific version may not be compatible with an older or newer version. Your JDK, or Java Development Kit, includes a JVM, or Java Virtual Machine, that executes the Java Byte code. When you play Minecraft \(using the new launcher\), it loads up the correct JDK automatically. Server software doesn't come with a JDK, meaning you may need to set a compatible one up manually.
+Java is unsurprisingly the platform typically used to run Minecraft: Java Edition servers. Java is an evolving language, and that means new versions come out as time goes on. Code written for a specific version may not be compatible with an older or newer version. Your JDK, or Java Development Kit, includes a JVM, or Java Virtual Machine, that executes the Java bytecode. When you play Minecraft \(using the new launcher\), it loads up the correct JDK automatically. Server software doesn't come with a JDK, meaning you may need to set a compatible one up manually if it's not already installed.
 
 ### Where Should I Get My JDK?
 
-Java is primarily developed by [Oracle](https://www.oracle.com/) — you're able to download the copy you need from their website. However, it includes a license that states you must **pay** in order to use it in a commercial setting \(which you will be\). Luckily, you can instead download the JDK from [https://adoptopenjdk.net/](https://adoptopenjdk.net/). The builds provided are closely identical to those provided by Oracle. Best of all, there's no egregious license you must agree to. There's virtually no reason to use Oracle's proprietary builds instead.
+Java is primarily developed by [Oracle](https://www.oracle.com/). You're able to download their JDK version from their website. However, it includes a license that states you must **pay** in order to use it in a commercial setting \(which you likely will be\). Luckily, you can instead download the JDK from [https://adoptopenjdk.net/](https://adoptopenjdk.net/). They do not require you to pay for commercial use, and their builds are closely identical to those provided by Oracle. There's virtually no reason to use Oracle's builds instead.
 
 ### Which JDK Do I Need?
 
-Minecraft 1.12-1.16.5 requires Java 8 or "newer". Minecraft 1.17+ requires Java 16. However, there is nuance to this. For example, Forge for 1.12 doesn't work with Java 11. Unless you'll be running a 1.17+ server, you may want to install Java 8, Java 11, and Java 16 for when you need them. The most basic way of managing multiple Java versions is by finding the directory of the installed JDK version needed and then passing your Java command.
+Minecraft 1.12-1.16.5 requires Java 8 or "newer". Minecraft 1.17+ requires Java 16. However, there is nuance to this. For example, Forge for 1.12 doesn't work with Java 11. Unless you'll be running a 1.17+ server, you may want to install Java 8, Java 11, and Java 16 for when you need them. An easy way of using a particular JDK version is by finding it's directory, then passing your Java command. This works because it will execute with the binary in the directory instead of the system default.
 
-### Linux Bash Example
+### Linux Example
 
 ```bash
 # Target the directory where the binary is so the Java command is executed there instead of the system default.
@@ -489,7 +489,7 @@ If you see an error in the console upon startup, it may be because the JDK isn't
 
 Each new release of Java includes important performance and security improvements. To get the most out of your server, you'll want to use the greatest compatible version. Ex. using Java 11 for a 1.14 server even though it could work with Java 8.
 
-### How Do I Get a JDK for Java 16?
+### How Do I Get a JDK for Java 16 on \_ operating system?
 
 Paper has an extensive guide on it that you can view [here](https://paper.readthedocs.io/en/latest/java-update/index.html).
 
@@ -497,7 +497,7 @@ Paper has an extensive guide on it that you can view [here](https://paper.readth
 
 ### Downloading The Jar
 
-Each project hosts their server jars differently, which can make finding them a tad complicated. It's often recommended to go to the projects website and look for a "download" button and or read the `README.MD` of their GitHub repository and download the latest release version.
+Each project hosts their server jars differently, which can make finding them a tad complicated. It's often recommended to go to the project's official website and look for a "download" button and or read the `README.MD` of their GitHub repository.
 
 ![](https://i.imgur.com/HClBh6d.gif)
 
@@ -509,7 +509,7 @@ Move the jar into a folder. The folder name could be anything, but typically peo
 
 To actually run the jar, you'll need to use a command. However, typing that command every time is inefficient. Luckily, you can create a script that will do it for you. Check out [SpigotMC's Installation Guide](https://www.spigotmc.org/wiki/spigot-installation/) for information about how to create a start script. If you're using multiple JDKs, refer to this [example](creating-a-java-server.md#linux-bash-example).
 
-If you're able to use Bash, here is a basic start script that automatically restarts the server when it has stopped. Make sure to edit the RAM values \(`-Xms3G -Xmx3G` —allows the JVM to use 3 gigabytes of RAM\).
+If you're able to use Bash, here is a basic start script that automatically restarts the server when it has stopped. Make sure to edit the RAM values \(`-Xms3G -Xmx3G` — this example allows the JVM to use 3 gigabytes of RAM\).
 
 ```bash
 #!/bin/bash

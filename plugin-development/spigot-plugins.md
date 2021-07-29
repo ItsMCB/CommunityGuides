@@ -181,7 +181,7 @@ while true; do
     echo "[i] Copying the plugin..."
     cp -a "C:\Users\ItsMC\Desktop\Github\BeginnerProject\target\BeginnerProject-1.0-SNAPSHOT.jar" "C:\Users\ItsMC\Desktop\Local Velocity Network\Server2\plugins\\" # Copy jar from output folder to server's plugins folder
     java -Xms3G -Xmx3G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar *.jar nogui #Launch the jar file in the directory w/3 gigs of RAM and implementing Aikar's Flags
-    echo "[i] Restarting..." # Line ran after Java process has been stopped
+    echo "[i] Restarting..." # Alee Java process has been stopped
     sleep 3 # Waits 3 seconds before restarting the server
 done;
 ```

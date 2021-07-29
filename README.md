@@ -1,4 +1,4 @@
-# Community Guides
+# Welcome
 
 [![License](https://img.shields.io/github/license/Vexelosity/CommunityGuides)](https://img.shields.io/github/license/Vexelosity/CommunityGuides) [![Github Forks](https://img.shields.io/github/forks/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/network/members) [![GitHub Stars](https://img.shields.io/github/stars/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/issues) [![Discord](https://img.shields.io/discord/693992573294870639.svg)](https://discord.com/invite/QW2m6bYG4S)
 
@@ -13,10 +13,6 @@ Welcome to Vexelosity's Community Guides! This is meant to be a useful resource 
 Come join us on [Discord](https://discord.com/invite/QW2m6bYG4S)!
 
 Know a thing or two about Minecraft? [Contribute](contributing.md)!
-
-## Note
-
-The "..." indicates that a section will be finished another time. Please be patient while the guides are being worked on 💖
 
 ## Deliberations
 
