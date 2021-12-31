@@ -13,7 +13,7 @@ Minecraft wouldn't be what it is today without it's [multiplayer features](https
 
 Check out these resources to aid you in your server ownership journey. Feel free to let them know we sent you there 😎
 
-* [Discord - Vexelosity](https://discord.com/invite/QW2m6bYG4S)
+* [Discord - Martin's Community](https://discord.com/invite/QW2m6bYG4S)
 * [Minecraft - How to Play Minecraft Multiplayer](https://help.minecraft.net/hc/en-us/articles/360035131391-How-to-Play-Minecraft-Multiplayer)
 * [Reddit - Admincraft](https://www.reddit.com/r/admincraft/)
 

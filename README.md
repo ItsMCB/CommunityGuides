@@ -1,12 +1,12 @@
 # Welcome
 
-[![License](https://img.shields.io/github/license/Vexelosity/CommunityGuides)](https://img.shields.io/github/license/Vexelosity/CommunityGuides) [![Github Forks](https://img.shields.io/github/forks/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/network/members) [![GitHub Stars](https://img.shields.io/github/stars/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/Vexelosity/CommunityGuides)](https://github.com/Vexelosity/CommunityGuides/issues) [![Discord](https://img.shields.io/discord/693992573294870639.svg)](https://discord.com/invite/QW2m6bYG4S)
+[![License](https://img.shields.io/github/license/ItsMCB/CommunityGuides)](https://img.shields.io/github/license/ItsMCB/CommunityGuides) [![Github Forks](https://img.shields.io/github/forks/ItsMCB/CommunityGuides)](https://github.com/ItsMCB/CommunityGuides/network/members) [![GitHub Stars](https://img.shields.io/github/stars/ItsMCB/CommunityGuides)](https://github.com/ItsMCB/CommunityGuides/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/ItsMCB/CommunityGuides)](https://github.com/ItsMCB/CommunityGuides/issues) [![Discord](https://img.shields.io/discord/693992573294870639.svg)](https://discord.com/invite/QW2m6bYG4S)
 
 ## Project Goal
 
-Welcome to Vexelosity's Community Guides! This is meant to be a useful resource for all Minecraft players who go beyond just playing the game. You can learn about topics such as server administration, plugin development, and much more!
+Welcome to ItsMCB's Community Guides! This is meant to be a useful resource for all Minecraft players who go beyond just playing the game. You can learn about topics such as server administration, plugin development, and much more!
 
-#### This project is best viewed on our [website](https://guides.vexelosity.com/).
+#### This project is best viewed on our [website](https://guides.ItsMCB.me).
 
 ## Get Involved With The Community
 

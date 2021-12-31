@@ -16,7 +16,7 @@ The goal of this guide is to teach you the basics of the Spigot API and provide 
 
 Check out these resources to aid you in your development process.
 
-* [Vexelosity Discord](https://discord.com/invite/QW2m6bYG4S)
+* [Martin's Community Discord](https://discord.com/invite/QW2m6bYG4S)
 * [Bukkit Javadocs](https://hub.spigotmc.org/javadocs/bukkit/)
 * [SpigotMC Official Website](https://www.spigotmc.org/)
 * [SpigotMC - "Tips on creating your very first plugin!"](https://www.spigotmc.org/wiki/tips-on-creating-your-very-first-plugin/)
